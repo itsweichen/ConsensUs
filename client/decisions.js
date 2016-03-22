@@ -21,10 +21,12 @@ Template.newDecision.events({
   			users:[{userId:userId, userName:names}],
   			createdAt: new Date(),
   			sTH:0.5
-	    }, function(error, result){        
+	    }, function(error, id){        
 	       //initialProject(result, currentUser, names);
 	       //Router.go('project' /*, {_id: result, _uid: currentUser}*/);
          $('#newDecisionModal').modal('hide');
+         $('#newDecisionSuccessModal').modal();
+         $('#decision-id').val(id);
       });
 	    
       //Indexs.insert({userID:currentUser, sTH:0});
