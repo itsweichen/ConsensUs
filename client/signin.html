@@ -23,8 +23,48 @@
 					<input type="checkbox" value="remember-me"> Remember me
 				</label>
 			</div>
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+			<button class="btn btn-lg btn-success btn-block" type="submit">Sign in</button>
+			<br><hr><br>
+			<a class="btn btn-lg btn-default btn-block" id="toSignUp" href="/">No account? Register!</a>
 		</form>
+
+
+	</div> <!-- /container -->
+</template>
+
+
+
+
+<template name="register">
+	<div class="jumbotron">
+		<div class="container text-center">
+			<h1>ConsensUs</h1>
+		</div>
+	</div>
+
+	<div class="container">
+
+		<form class="form-signin">
+			<!-- <h2 class="form-signin-heading">Please sign in</h2> -->
+
+			<!-- <label for="inputEmail" class="sr-only">Email address</label>
+			<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus> -->
+
+			<label for="inputUsername" class="sr-only">User Name</label>
+			<input type="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+
+			<label for="inputPassword" class="sr-only">Password</label>
+			<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox" value="remember-me"> Remember me
+				</label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+			<br><hr><br>
+			<a class="btn btn-lg btn-default btn-block" href="/" id="toSignIn">Have an account? Sign In!</a>
+		</form>
+
 
 	</div> <!-- /container -->
 </template>
