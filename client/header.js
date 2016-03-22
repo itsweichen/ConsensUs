@@ -7,6 +7,6 @@ Template.header.events({
 
 Template.header.helpers({
 	username: function() {
-		return Meteor.user().username;
+		return Meteor.user()['username'];
 	}
 });

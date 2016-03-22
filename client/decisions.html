@@ -7,28 +7,59 @@
 		<h3>My Decisions</h3>
 
 		<div class="decision-list">
-			<div class="decision-card">
-				<h4>PhD Candidate</h4>
-			</div>
 
-			<div class="decision-card">
-				<h4>City</h4>
-			</div>
+			{{#each decisions}}
+				{{> decision}}
+			{{/each}}
 
-			<div class="decision-card">
-				<h4>Conference</h4>
-			</div>
-
-			<div class="decision-card">
-				<h4>Research</h4>
-			</div>
-
-			<div class="decision-card" id="decision-add-new">
+			<div class="decision-card" id="decision-add-new" data-toggle="modal" data-target="#newDecisionModal">
 				<span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
-				<h4>Add New Decision</h4>
+				<h4>New Decision</h4>
 			</div>
 		</div>
 
 	</div> <!-- container -->
+
+	{{> newDecision}}
+</template>
+
+<template name="decision">
+	<div class="decision-card">
+		<h4>{{name}}</h4>
+		<p>{{description}}</p>
+	</div>
+</template>
+
+<template name="newDecision">
+
+	<!-- Modal -->
+	<div class="modal fade" id="newDecisionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">New Decision</h4>
+				</div>
+				<div class="modal-body">
+
+					<form>
+						<div class="form-group">
+							<label for="recipient-name" class="control-label">Decision name</label>
+							<input type="text" class="form-control" id="decision-name">
+						</div>
+						<div class="form-group">
+							<label for="message-text" class="control-label">Decision description</label>
+							<textarea class="form-control" id="decision-description"></textarea>
+						</div>
+					</form>
+
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+					<button type="button" class="btn btn-primary" id="submit-form">Create</button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </template>

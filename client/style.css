@@ -8,13 +8,14 @@
 
 .decision-card{
     margin: 10px;
-    padding: 0 8px;
+    padding: 5px 20px;
     background-color: #f2f2f2;
     border: 0 none;
     border-radius: 2px;
     box-shadow: 0 2px 3px 0 rgba(0,0,0,0.3);
     width: 300px;
     height: 100px;
+    cursor: pointer;
 }
 
 #decision-add-new{
