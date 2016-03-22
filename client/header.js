@@ -4,3 +4,9 @@ Template.header.events({
 		Meteor.logout();
 	}
 });
+
+Template.header.helpers({
+	username: function() {
+		return Meteor.user().username;
+	}
+});
