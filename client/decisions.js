@@ -1,6 +1,6 @@
 Template.decisions.helpers({
 	decisions: function(){
-		return Decisions.find();
+		return Decisions.find({createdby: Meteor.userId()});
 	}
 });
 
