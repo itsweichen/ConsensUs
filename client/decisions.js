@@ -4,6 +4,12 @@ Template.decisions.helpers({
 	}
 });
 
+Template.decisionItem.events({
+  'click .decision-card': function(event){
+    Router.go("/decision/"+this._id+"/"+Meteor.userId());
+  }
+});
+
 Template.newDecision.events({
 	'click #submit-form': function(event){
 		  event.preventDefault();
